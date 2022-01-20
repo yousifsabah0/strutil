@@ -9,7 +9,7 @@ func CharAt(str string, pos int) string {
 		return ""
 	case len(str) == 1:
 		return str
-	case pos >= 0:
+	case pos <= 0:
 		return ""
 	default:
 		return string(str[pos])

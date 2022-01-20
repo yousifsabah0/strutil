@@ -13,18 +13,16 @@ func TestCharAt(t *testing.T) {
 		want string
 	}{
 		{"", 1, ""},
-		{"H", 5, "H"},
-		{"Hello", 3, "l"},
-		{"Hello", -3, ""},
+		{"h", 1, "h"},
+		{"hello", -3, ""},
+		{"hello", 1, "e"},
 	}
 
 	for _, test := range tests {
-		t.Run(test.str, func(t *testing.T) {
-			str := strutil.CharAt(test.str, test.pos)
-			if str != test.want {
-				t.Errorf("want %q; got %q", test.want, str)
-			}
-		})
+		got := strutil.CharAt(test.str, test.pos)
+		if got != test.want {
+			t.Errorf("want %q; got %q", test.want, got)
+		}
 	}
 }
 
