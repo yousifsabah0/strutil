@@ -22,3 +22,8 @@ func BasicSearch(str, pattern string) int {
 	}
 	return -1
 }
+
+//TODO: Complete this function.
+func Search(text []string, pattern []string) {
+
+}
